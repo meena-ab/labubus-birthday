@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-bg">
+
+<canvas id="fireworks"></canvas>
+
+<button class="btn" onclick="location.href='hearts.html'"
+style="position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%);">
+Next
+</button>
+
+<script>
+// SIMPLE FIREWORKS
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+function randomFirework() {
+    ctx.fillStyle = `rgba(255,215,0,${Math.random()})`;
+    ctx.beginPath();
+    ctx.arc(
+        Math.random() * canvas.width,
+        Math.random() * canvas.height,
+        Math.random() * 8 + 4,
+        0,
+        Math.PI * 2
+    );
+    ctx.fill();
+}
+setInterval(randomFirework, 70);
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pictures</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Memories 📸</h1>
+<div class="gallery">
+<img src="images/pic1.jpeg">
+<img src="images/pic2.jpeg">
+<img src="images/pic3.jpeg">
+<img src="images/pic4.jpeg">
+</div>
+
+<script src="script.js"></script>
+<script>
+document.body.onclick = () => goToPage('message.html');
+</script>
+</body>
+</html>
+
+</body>
+</html>

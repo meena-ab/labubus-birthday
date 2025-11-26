@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gold-bg center">
+
+<h2 class="white">Tap to open your gift 🎁</h2>
+
+<img src="images/gift-closed.png" id="gift" class="gift">
+
+<script>
+document.getElementById("gift").onclick = function() {
+    this.src = "images/gift-open.png";
+    setTimeout(() => location.href = "music.html", 1200);
+};
+</script>
+
+</body>
+</html>
